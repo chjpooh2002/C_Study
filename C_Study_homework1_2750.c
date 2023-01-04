@@ -1,26 +1,26 @@
 #include <stdio.h>
-// ¹éÁØ 2750
+// ë°±ì¤€ 2750
 int number[1001];
 int main(void)
 {
 	int i ,j;
-	int minimum; // ÃÖ¼Ò°ªÀ» °®´Â ¿ø¼ÒÀÇ ÀÎµ¦½º
-	int temp;   // ÃÖ¼Ò°ªÀ» ÀúÀåÇÒ º¯¼ö 
+	int minimum; // ìµœì†Œê°’ì„ ê°–ëŠ” ì›ì†Œì˜ ì¸ë±ìŠ¤
+	int temp;   // ìµœì†Œê°’ì„ ì €ì¥í•  ë³€ìˆ˜ 
 	int n;
 	scanf("%d",&n);
 	for(i=0;i<n;i++)
 		scanf("%d",&number[i]);
 	for(i=0;i<n-1;i++)
 	{
-		minimum = i;//i¹øÂ° ¿ø¼Ò¸¦ ÃÖ¼Ò¶ó »ı°¢ÇÏ°í ¾Æ·¡ for¹®¿¡¼­
-					//i¹øÂ° ÀÌÈÄÀÇ ¸ğµç ¿ø¼Ò¿¡ Á¢±ÙÇÏ¿© ÀÌ Áß ÃÖ¼Ò°ªÀ» °®´Â
-					// ÀÎµ¦½º °ªÀ» minimum¿¡ ÀúÀå
+		minimum = i;//ië²ˆì§¸ ì›ì†Œë¥¼ ìµœì†Œë¼ ìƒê°í•˜ê³  ì•„ë˜ forë¬¸ì—ì„œ
+					//ië²ˆì§¸ ì´í›„ì˜ ëª¨ë“  ì›ì†Œì— ì ‘ê·¼í•˜ì—¬ ì´ ì¤‘ ìµœì†Œê°’ì„ ê°–ëŠ”
+					// ì›ì†Œì˜ ì¸ë±ìŠ¤ ê°’ì„ minimumì— ì €ì¥
 		for(j=i+1;j<n;j++)
 		{
 			if(number[minimum]>number[j]) 
 				minimum = j;                 
 		}
-		temp = number[minimum]; //i¹øÂ° ¿ø¼Ò¿Í minimumÀÎµ¦½º¸¦ °®´Â ¿ø¼ÒÀÇ °ª ±³È¯
+		temp = number[minimum]; //ië²ˆì§¸ ì›ì†Œì™€ minimumì¸ë±ìŠ¤ë¥¼ ê°–ëŠ” ì›ì†Œì˜ ê°’ êµí™˜
 		number[minimum] = number[i];
 		number[i] = temp;
 	}
