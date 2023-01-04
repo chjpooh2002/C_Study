@@ -38,7 +38,7 @@ void input_nums(int *lotto_nums)
 				break;
 			}
 		}
-		if(number1 != number2)     // 이 조건문이 곧 같은 원소가 이미 있다는 뜻이므로 continue
+		if(number1 != number2)     // 이 조건문이 참이면 곧 같은 원소가 있다는 뜻이므로 continue
 			continue;
 		lotto_nums[number1] = input_number;  //같은 원소가 없으면 number1의 인덱스 원소에 입력 받은 수 대입  
 		number1++;
