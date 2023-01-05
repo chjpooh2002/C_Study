@@ -1,4 +1,5 @@
 #include <stdio.h>
+//배열 포인터를 왜 쓰는지 잘 이해를 못했는데 이해하게 됨
 
 void input(int (*)[6]);
 void calculate(int (*)[6]);
